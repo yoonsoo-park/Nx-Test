@@ -5,7 +5,7 @@ import * as commander from 'commander';
 const program = new commander.Command();
 
 program
-  .version('1.0.0')
+  .version('1.0.1')
   .description('A CLI tool for managing permissions and data models.');
 
 program
