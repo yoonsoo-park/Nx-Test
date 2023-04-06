@@ -13,7 +13,7 @@
         "outputPath": "dist/packages/metaman",
         "format": ["cjs"],
         "bundle": false,
-        "main": "packages/metaman/src/main.ts",
+        "main": "packages/metaman/src/test-metaman.ts",
         "tsConfig": "packages/metaman/tsconfig.app.json",
         "assets": ["packages/metaman/src/assets"],
         "generatePackageJson": true,
@@ -70,6 +70,13 @@
           "ci": true,
           "codeCoverage": true
         }
+      }
+    },
+    "register": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm link",
+        "cwd": "dist/packages/metaman"
       }
     }
   },
