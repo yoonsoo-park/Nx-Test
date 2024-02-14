@@ -1,5 +1,5 @@
 version: 2
-
+#trigger
 updates:
   - package-ecosystem: "npm"
     directory: "/"
