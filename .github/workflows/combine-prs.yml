@@ -19,7 +19,7 @@ jobs:
         id: create-combined-pr
         name: Create Combined PR
         with:
-          github-token: ${{secrets.CI_USER_REPO_ACCESS_TOKEN}}
+          github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
             const branchPrefix = "dependabot";
             const mustBeGreen = true;
