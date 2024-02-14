@@ -23,7 +23,8 @@ jobs:
           script: |
             const branchPrefix = "dependabot";
             const mustBeGreen = true;
-            const combineBranchName = "combine-prs-branch";
+            const timestamp = new Date().toISOString().replace(/[-:.TZ]/g, "");
+            const combineBranchName = `combine-prs-branch-${timestamp}`;
             const ignoreLabel = "nocombine";
 
             const pulls = await github.paginate('GET /repos/:owner/:repo/pulls', {
